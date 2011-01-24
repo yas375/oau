@@ -1,5 +1,6 @@
-<% title "New Sample" %>
+<% title 'Выборка' %>
+<p><%= link_to "Сохранённые выборки", samples_path %></p>
 
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", samples_path %></p>
+<%= semantic_form_for @sample do |f| %>
+  <%= render 'form', :f => f  %>
+<% end %>

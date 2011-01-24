@@ -1,5 +1,6 @@
 KursachPoOau::Application.routes.draw do
-  resources :samples
+  resources :samples, :except => :show
+  root :to => "samples#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,8 +1,7 @@
-<% title "Edit Sample" %>
+<% title 'Выборка' %>
+<p><%= link_to "Сохранённые выборки", samples_path %> | <%= link_to "Новая выборка", new_sample_path %></p>
 
-<%= render 'form' %>
+<%= semantic_form_for @sample do |f| %>
+  <%= render 'form', :f => f  %>
+<% end %>
 
-<p>
-  <%= link_to "Show", @sample %> |
-  <%= link_to "View All", samples_path %>
-</p>

@@ -73,3 +73,8 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+
+.table {width: 100%; border-collapse:collapse}
+.table th{background-color: #ddd; border: 1px solid #aaa; padding: 5px;}
+.table td{border: 1px solid #aaa; padding: 3px 5px;}

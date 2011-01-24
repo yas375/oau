@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(:version => 20110124201105) do
   create_table "samples", :force => true do |t|
     t.integer  "n"
     t.integer  "c"
-    t.decimal  "p1",         :precision => 10, :scale => 0
-    t.decimal  "p2",         :precision => 10, :scale => 0
-    t.decimal  "step",       :precision => 10, :scale => 0
-    t.decimal  "aql",        :precision => 10, :scale => 0
-    t.decimal  "ltpd",       :precision => 10, :scale => 0
+    t.decimal  "p1",         :precision => 8, :scale => 2
+    t.decimal  "p2",         :precision => 8, :scale => 2
+    t.decimal  "step",       :precision => 8, :scale => 2
+    t.decimal  "aql",        :precision => 8, :scale => 2
+    t.decimal  "ltpd",       :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

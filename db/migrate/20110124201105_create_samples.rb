@@ -3,15 +3,15 @@ class CreateSamples < ActiveRecord::Migration
     create_table :samples do |t|
       t.integer :n
       t.integer :c
-      t.decimal :p1
-      t.decimal :p2
-      t.decimal :step
-      t.decimal :aql
-      t.decimal :ltpd
+      t.decimal :p1, :precision => 8, :scale => 2
+      t.decimal :p2, :precision => 8, :scale => 2
+      t.decimal :step, :precision => 8, :scale => 2
+      t.decimal :aql, :precision => 8, :scale => 2
+      t.decimal :ltpd, :precision => 8, :scale => 2
       t.timestamps
     end
   end
-  
+
   def self.down
     drop_table :samples
   end

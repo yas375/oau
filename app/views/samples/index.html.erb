@@ -1,6 +1,6 @@
-<% title "Samples" %>
+<% title "Сохранённые выборки" %>
 
-<table>
+<table class="table">
   <tr>
     <th>N</th>
     <th>C</th>
@@ -9,6 +9,7 @@
     <th>Step</th>
     <th>Aql</th>
     <th>Ltpd</th>
+    <th></th>
   </tr>
   <% for sample in @samples %>
     <tr>
@@ -19,11 +20,12 @@
       <td><%= sample.step %></td>
       <td><%= sample.aql %></td>
       <td><%= sample.ltpd %></td>
-      <td><%= link_to "Show", sample %></td>
-      <td><%= link_to "Edit", edit_sample_path(sample) %></td>
-      <td><%= link_to "Destroy", sample, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td class="actions">
+        <%= link_to "Подробнее", edit_sample_path(sample) %>
+        <%= link_to "Удалить", sample, :confirm => 'Уверены?', :method => :delete %>
+      </td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Sample", new_sample_path %></p>
+<p><%= link_to "Новая выборка", new_sample_path %></p>
