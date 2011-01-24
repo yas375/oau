@@ -1,0 +1,29 @@
+<% title "Samples" %>
+
+<table>
+  <tr>
+    <th>N</th>
+    <th>C</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>Step</th>
+    <th>Aql</th>
+    <th>Ltpd</th>
+  </tr>
+  <% for sample in @samples %>
+    <tr>
+      <td><%= sample.n %></td>
+      <td><%= sample.c %></td>
+      <td><%= sample.p1 %></td>
+      <td><%= sample.p2 %></td>
+      <td><%= sample.step %></td>
+      <td><%= sample.aql %></td>
+      <td><%= sample.ltpd %></td>
+      <td><%= link_to "Show", sample %></td>
+      <td><%= link_to "Edit", edit_sample_path(sample) %></td>
+      <td><%= link_to "Destroy", sample, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Sample", new_sample_path %></p>

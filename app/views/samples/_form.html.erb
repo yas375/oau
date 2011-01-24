@@ -1,0 +1,32 @@
+<%= form_for @sample do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :n %><br />
+    <%= f.text_field :n %>
+  </p>
+  <p>
+    <%= f.label :c %><br />
+    <%= f.text_field :c %>
+  </p>
+  <p>
+    <%= f.label :p1 %><br />
+    <%= f.text_field :p1 %>
+  </p>
+  <p>
+    <%= f.label :p2 %><br />
+    <%= f.text_field :p2 %>
+  </p>
+  <p>
+    <%= f.label :step %><br />
+    <%= f.text_field :step %>
+  </p>
+  <p>
+    <%= f.label :aql %><br />
+    <%= f.text_field :aql %>
+  </p>
+  <p>
+    <%= f.label :ltpd %><br />
+    <%= f.text_field :ltpd %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
