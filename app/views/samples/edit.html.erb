@@ -5,3 +5,19 @@
   <%= render 'form', :f => f  %>
 <% end %>
 
+<% if @data %>
+  <table class="table">
+    <tr>
+      <% @data.header.each do |cell| %>
+        <th><%= cell.value %></th>
+      <% end %>
+    </tr>
+    <% @data.rows.each do |row| %>
+      <tr>
+        <% row.each do |cell| %>
+          <td><%=h cell.value %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

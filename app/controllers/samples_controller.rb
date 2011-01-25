@@ -19,6 +19,7 @@ class SamplesController < ApplicationController
 
   def edit
     @sample = Sample.find(params[:id])
+    @data = Data::Table.new(@sample)
   end
 
   def update
