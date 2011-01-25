@@ -20,4 +20,7 @@
       </tr>
     <% end %>
   </table>
+
+  <p>Вероятность ошибочного отказа от приёмки пригодной партии продукции: <%= format_decimal(@sample.false_rejection, 3) %></p>
+  <p>Вероятность ошибочной приёмки непригодной партии продукции: <%= format_decimal(@sample.false_acceptance, 3) %></p>
 <% end %>

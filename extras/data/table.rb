@@ -27,16 +27,10 @@ class Data::Table
       (sample.p1..sample.p2).step(sample.step) do |p|
         row = Data::Row.new
         row << Data::Cell.new(p)
-        q = 1 - p
-        row << Data::Cell.new(q)
+        row << Data::Cell.new(1 - p)
         p_priemki_partii = 0
         (sample.c + 1).times do |r|
-          value = [].tap do |s|
-            s << factorial(sample.n)/(factorial(sample.n - r)*factorial(r))
-            s << p ** r
-            s << q ** (sample.n - r)
-          end.inject(:*)
-
+          value = sample.probability(r, p)
           row << Data::Cell.new(format_decimal(value))
           p_priemki_partii += value
         end
