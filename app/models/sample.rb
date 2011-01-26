@@ -18,15 +18,6 @@ class Sample < ActiveRecord::Base
     end.inject(:*)
   end
 
-
-  def factorial(value)
-    if value == 0
-      1
-    else
-      (1..value).inject(:*)
-    end
-  end
-
   def false_rejection
     prop_sum = 0
     (self.c + 1).times do |r|
@@ -41,5 +32,9 @@ class Sample < ActiveRecord::Base
       prop_sum += self.probability(r, self.ltpd/100)
     end
     prop_sum
+  end
+
+  def factorial(value)
+    (1..value).inject(:*) || 1
   end
 end
